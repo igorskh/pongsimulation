@@ -96,12 +96,14 @@ class PongGame:
     rows = 0
     cols = 0
     mk = None
+    pongai = None
+
     racket1 = None
     racket2 = None
     ball = None
+
     buffer = []
     started = False
-    pongai = None
     destination_column = 0
     frame_rate = 0.5
 
