@@ -88,6 +88,7 @@ class Ball:
     def get_pos(self, defined_pos=None):
         if defined_pos is None:
             defined_pos = self.pos
+        # TODO: Sometimes defined_pos[1]  goes to negative, why??
         line = int('1' + '0' * (self.cols - 1), 2) >> defined_pos[1]
         return defined_pos[0], get_bin(line, self.cols)
 
@@ -120,7 +121,7 @@ class PongGame:
         self.pongai = PongAI(rows, cols, 2)
 
     def new_game(self):
-        # initialize rackets
+        # initialize rackets, second arg is a size
         self.racket1 = Racket(self.cols, 2)
         self.racket2 = Racket(self.cols, 2)
         # initialize ball
@@ -184,8 +185,10 @@ class PongGame:
         self.buffer.append([prepared_data[0], prepared_data[1]])
 
     def send(self):
+        # TODO: rewrite to .pop() method
         for el in self.buffer:
             self.mk.recv(el[0], el[1])
+        self.buffer = []
 
     def show_table(self):
         self.mk.show_table()
