@@ -4,7 +4,7 @@ This simulation of Pong game basically created for laboratory project to connect
 
 But also works well with a command line in Windows or Linux.
 
-This includes a basic algorithm for Pong game:
+### This includes a basic algorithm for Pong game ###
 * Initialization of rackets and a ball
 * Behaviour of a ball (such as bouncing out of walls and racket)
 * Simple AI - calculation a path of the ball and moving rackets
