@@ -7,6 +7,7 @@ E-mail: igor.skh@gmail.com
 """
 from sys import stdout
 from time import sleep
+from subprocess import call
 
 
 def get_bin(x, n): return format(x, 'b').zfill(n)
@@ -21,6 +22,9 @@ class MKSim:
     table = []
     frame_rate = 0.5
     showed = False
+    i2c_enabled = False
+    address = 0x60
+    bus_number = 1
 
     # clear n rows of stdout
     def clear(self, n=None):
@@ -43,6 +47,9 @@ class MKSim:
         self.showed = True
 
     def recv(self, address, byte):
+        if self.i2c_enabled:
+            # smbus is usually not installed then use i2cset utility
+            call(["i2cset", "-y", str(self.bus_number), str(self.address), hex(address), hex(byte)])
         line = (address & 0xF0) >> 4
         data = 0b000000000000
         data |= (address & 0x0F) << 8
