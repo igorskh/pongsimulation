@@ -9,7 +9,7 @@ But also works well with a command line in Windows or Linux.
 * Behaviour of a ball (such as bouncing out of walls and racket)
 * Simple AI - calculation a path of the ball and moving rackets
 
-### Futher information ###
+### Further information ###
 
 * More about [Pong](http://www.ponggame.org/)
 * More about [hardware stuff](https://www.conrad.de/de/conrad-retro-spiel-ping-pong-902766.html)
@@ -18,7 +18,7 @@ But also works well with a command line in Windows or Linux.
 
 * Make sure you have python installed
 * Written with python 3.5.1, but also tested with 2.7
-* Run 
+* Run following in command line:
 ```
 #!bash
 
