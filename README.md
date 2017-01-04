@@ -1,6 +1,6 @@
 # Pong game simulation #
 
-This simulation of Pong game basically created for laboratory project to connect raspberry PI and Atmel atmega8 microcontroller. 
+This simulation of Pong game basically created for laboratory project to connect raspberry PI and Atmel atmega8 microcontroller with 10x12 LED panel. 
 
 But also works well with a command line in Windows or Linux.
 
