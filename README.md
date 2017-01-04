@@ -12,7 +12,7 @@ This includes a basic algorithm for Pong game:
 ### Futher information ###
 
 * More about [Pong](http://www.ponggame.org/)
-* More about (hardware stuff)[https://www.conrad.de/de/conrad-retro-spiel-ping-pong-902766.html]
+* More about [hardware stuff](https://www.conrad.de/de/conrad-retro-spiel-ping-pong-902766.html)
 
 ### How to use? ###
 
